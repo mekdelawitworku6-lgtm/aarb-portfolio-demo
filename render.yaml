@@ -1,0 +1,9 @@
+# Render Blueprint for the AARB portfolio demo.
+# Place this file at the root of the repository when publishing standalone.
+services:
+  - type: web
+    name: aarb-portfolio-demo
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    autoDeployTrigger: commit
